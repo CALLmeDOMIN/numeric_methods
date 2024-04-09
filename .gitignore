@@ -1,0 +1,24 @@
+# General
+*.log
+*.csv
+*.dat
+.DS_Store
+
+# Sensitive information
+*.env
+
+# Python environments
+env/
+venv/
+pyvenv.cfg
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
