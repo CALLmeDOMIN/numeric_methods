@@ -7,6 +7,42 @@ def print_matrix(matrix):
     print()
 
 
+def natural(a, x):
+    if len(a) == 0:
+        return 0
+    return a[0] + sum(a[i] * x ** i for i in range(1, len(a)))
+
+
+def horner(a, x):
+    result = a[0]
+    for i in range(1, len(a)):
+        result = result * x + a[i]
+    return result
+
+
+def divided_diff(x, y):
+    n = len(y)
+    coef = y.copy()
+    for j in range(1, n):
+        for i in range(n - 1, j - 1, -1):
+            coef[i] = (coef[i] - coef[i - 1]) / (x[i] - x[i - j])
+
+    return coef
+
+
+def newton(x, y, x_val):
+    n = len(x)
+    a = divided_diff(x, y)
+    result = a[-1]
+    for i in range(n - 2, -1, -1):
+        result = result * (x_val - x[i]) + a[i]
+    return result
+
+
+def mse(y_true, y_pred):
+    return sum((y_p - y_t) ** 2 for y_p, y_t in zip(y_pred, y_true)) / len(y_true)
+
+
 def matrix_pivoting(matrix, intercept, k):
     max_value = matrix[k][k]
     max_index = k
