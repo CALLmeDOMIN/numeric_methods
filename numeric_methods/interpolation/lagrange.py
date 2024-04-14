@@ -1,4 +1,7 @@
-def lagrange_interpolation(x_points, y_points, x):
+from typing import List
+
+
+def lagrange_interpolation(x_points: List[float], y_points: List[float], x: float) -> float:
     n = len(x_points)
     result = 0
     for i in range(n):

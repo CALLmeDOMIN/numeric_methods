@@ -1,4 +1,7 @@
-def divided_diff(x, y):
+from typing import List
+
+
+def divided_diff(x: List[float], y: List[float]) -> List[float]:
     n = len(y)
     coef = y.copy()
     for j in range(1, n):
@@ -8,7 +11,7 @@ def divided_diff(x, y):
     return coef
 
 
-def newton_interpolation(x, y, x_val):
+def newton_interpolation(x: List[float], y: List[float], x_val: float) -> float:
     n = len(x)
     a = divided_diff(x, y)
     result = a[-1]

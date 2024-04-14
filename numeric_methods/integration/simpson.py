@@ -1,4 +1,7 @@
-def simpson_formula(f, n, a, b):
+from typing import Callable
+
+
+def simpson_formula(f: Callable[..., float], n: int, a: float, b: float) -> float:
     n *= 2
     h = (b - a) / n
     x = [a + i * h for i in range(n + 1)]

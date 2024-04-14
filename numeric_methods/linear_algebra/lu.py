@@ -1,7 +1,8 @@
+from typing import List
 from numpy import zeros as np_zeros
 
 
-def lu_decomposition(length, matrix, intercept):
+def lu_decomposition(length: int, matrix: List[List[float]], intercept: List[float]) -> List[float]:
     L = np_zeros((length, length))
     U = np_zeros((length, length))
 

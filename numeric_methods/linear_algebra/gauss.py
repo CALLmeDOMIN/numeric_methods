@@ -1,15 +1,19 @@
-def matrix_pivoting(matrix, intercept, k):
+from typing import List, Tuple
+
+
+def matrix_pivoting(matrix: List[List[float]], intercept: List[float], k: int) -> None:
     max_value = matrix[k][k]
     max_index = k
     for j in range(k + 1, len(matrix)):
         if abs(matrix[j][k]) > abs(max_value):
             max_value = matrix[j][k]
             max_index = j
+
     matrix[k], matrix[max_index] = matrix[max_index], matrix[k]
     intercept[k], intercept[max_index] = intercept[max_index], intercept[k]
 
 
-def gaussian_elimination(matrix, intercept):
+def gaussian_elimination(matrix: List[List[float]], intercept: List[float]) -> Tuple[List[List[float]], List[float]]:
     for k in range(len(matrix)):
         matrix_pivoting(matrix, intercept, k)
         if matrix[k][k] == 0:
@@ -19,3 +23,5 @@ def gaussian_elimination(matrix, intercept):
             for j in range(k, len(matrix)):
                 matrix[i][j] -= factor * matrix[k][j]
             intercept[i] -= factor * intercept[k]
+
+    return (matrix, intercept)
