@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>numeric_methods package &mdash; numeric_methods 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+      <link rel="stylesheet" href="_static/fonts.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+    <link rel="canonical" href="https://numeric-methods.dsieron.pl/numeric_methods.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="numeric_methods" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            numeric_methods
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">numeric_methods</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">numeric_methods package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-numeric_methods.integration.simpson">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.integration.simpson.simpson_formula"><code class="docutils literal notranslate"><span class="pre">simpson_formula()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.integration.trapezoidal.trapezoidal_formula"><code class="docutils literal notranslate"><span class="pre">trapezoidal_formula()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.horner.horner_interpolation"><code class="docutils literal notranslate"><span class="pre">horner_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.lagrange.lagrange_interpolation"><code class="docutils literal notranslate"><span class="pre">lagrange_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.natural.natural_interpolation"><code class="docutils literal notranslate"><span class="pre">natural_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.newton.divided_diff"><code class="docutils literal notranslate"><span class="pre">divided_diff()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.newton.newton_interpolation"><code class="docutils literal notranslate"><span class="pre">newton_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.horner_interpolation"><code class="docutils literal notranslate"><span class="pre">horner_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.lagrange_interpolation"><code class="docutils literal notranslate"><span class="pre">lagrange_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.natural_interpolation"><code class="docutils literal notranslate"><span class="pre">natural_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.interpolation.newton_interpolation"><code class="docutils literal notranslate"><span class="pre">newton_interpolation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.linear_algebra.gauss.gaussian_elimination"><code class="docutils literal notranslate"><span class="pre">gaussian_elimination()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.linear_algebra.gauss.matrix_pivoting"><code class="docutils literal notranslate"><span class="pre">matrix_pivoting()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.linear_algebra.lu.lu_decomposition"><code class="docutils literal notranslate"><span class="pre">lu_decomposition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.linear_algebra.gaussian_elimination"><code class="docutils literal notranslate"><span class="pre">gaussian_elimination()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.linear_algebra.lu_decomposition"><code class="docutils literal notranslate"><span class="pre">lu_decomposition()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.statistics.error_metrics.mae"><code class="docutils literal notranslate"><span class="pre">mae()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.statistics.error_metrics.mse"><code class="docutils literal notranslate"><span class="pre">mse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.statistics.error_metrics.rmse"><code class="docutils literal notranslate"><span class="pre">rmse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.statistics.mae"><code class="docutils literal notranslate"><span class="pre">mae()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.statistics.mse"><code class="docutils literal notranslate"><span class="pre">mse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.statistics.rmse"><code class="docutils literal notranslate"><span class="pre">rmse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numeric_methods.tools.tools.print_matrix"><code class="docutils literal notranslate"><span class="pre">print_matrix()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">numeric_methods</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">numeric_methods</a></li>
+      <li class="breadcrumb-item active">numeric_methods package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/numeric_methods.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="numeric-methods-package">
+<h1>numeric_methods package<a class="headerlink" href="#numeric-methods-package" title="Link to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="module-numeric_methods.integration.simpson">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-numeric_methods.integration.simpson" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.integration.simpson.simpson_formula">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.integration.simpson.</span></span><span class="sig-name descname"><span class="pre">simpson_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/integration/simpson.html#simpson_formula"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.integration.simpson.simpson_formula" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the integral of a function using Simpson’s formula.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> (<em>Callable</em><em>[</em><em>...</em><em>, </em><em>float</em><em>]</em>) – Function to integrate. Should return a number.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – Number of subintervals.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Lower limit of integration.</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – Upper limit of integration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of the integral.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.integration.trapezoidal">
+<dt class="sig sig-object py" id="numeric_methods.integration.trapezoidal.trapezoidal_formula">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.integration.trapezoidal.</span></span><span class="sig-name descname"><span class="pre">trapezoidal_formula</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/integration/trapezoidal.html#trapezoidal_formula"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.integration.trapezoidal.trapezoidal_formula" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the integral of a function using the trapezoidal formula.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> (<em>Callable</em><em>[</em><em>...</em><em>, </em><em>float</em><em>]</em>) – Function to integrate. Should return a number.</p></li>
+<li><p><strong>n</strong> (<em>int</em>) – Number of subintervals.</p></li>
+<li><p><strong>a</strong> (<em>float</em>) – Lower limit of integration.</p></li>
+<li><p><strong>b</strong> (<em>float</em>) – Upper limit of integration.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of the integral.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.interpolation.horner">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.horner.horner_interpolation">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.horner.</span></span><span class="sig-name descname"><span class="pre">horner_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/horner.html#horner_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.horner.horner_interpolation" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the interpolation of a polynomial using Horner’s method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – List of coefficients of the polynomial.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Value to interpolate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of the interpolation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.interpolation.lagrange">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.lagrange.lagrange_interpolation">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.lagrange.</span></span><span class="sig-name descname"><span class="pre">lagrange_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/lagrange.html#lagrange_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.lagrange.lagrange_interpolation" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the interpolation of a polynomial using Lagrange’s method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_points</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Values of the independent variable.</p></li>
+<li><p><strong>y_points</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Values of the function to interpolate.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Value to interpolate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of the interpolation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.interpolation.natural">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.natural.natural_interpolation">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.natural.</span></span><span class="sig-name descname"><span class="pre">natural_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/natural.html#natural_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.natural.natural_interpolation" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the interpolation of a polynomial using natural interpolation method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – List of coefficients of the polynomial.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Value to interpolate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of the interpolation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.interpolation.newton">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.newton.divided_diff">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.newton.</span></span><span class="sig-name descname"><span class="pre">divided_diff</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/newton.html#divided_diff"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.newton.divided_diff" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the divided differences of a set of points.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – First set of points.</p></li>
+<li><p><strong>y</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Second set of points.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>List of divided differences.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.newton.newton_interpolation">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.newton.</span></span><span class="sig-name descname"><span class="pre">newton_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/newton.html#newton_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.newton.newton_interpolation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function" id="module-numeric_methods.interpolation">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.horner_interpolation">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.</span></span><span class="sig-name descname"><span class="pre">horner_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/horner.html#horner_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.horner_interpolation" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the interpolation of a polynomial using Horner’s method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – List of coefficients of the polynomial.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Value to interpolate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of the interpolation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.lagrange_interpolation">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.</span></span><span class="sig-name descname"><span class="pre">lagrange_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_points</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/lagrange.html#lagrange_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.lagrange_interpolation" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the interpolation of a polynomial using Lagrange’s method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x_points</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Values of the independent variable.</p></li>
+<li><p><strong>y_points</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Values of the function to interpolate.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Value to interpolate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of the interpolation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.natural_interpolation">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.</span></span><span class="sig-name descname"><span class="pre">natural_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/natural.html#natural_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.natural_interpolation" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the interpolation of a polynomial using natural interpolation method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – List of coefficients of the polynomial.</p></li>
+<li><p><strong>x</strong> (<em>float</em>) – Value to interpolate.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Result of the interpolation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.interpolation.newton_interpolation">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.interpolation.</span></span><span class="sig-name descname"><span class="pre">newton_interpolation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_val</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/interpolation/newton.html#newton_interpolation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.interpolation.newton_interpolation" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function" id="module-numeric_methods.linear_algebra.gauss">
+<dt class="sig sig-object py" id="numeric_methods.linear_algebra.gauss.gaussian_elimination">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.linear_algebra.gauss.</span></span><span class="sig-name descname"><span class="pre">gaussian_elimination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intercept</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/numeric_methods/linear_algebra/gauss.html#gaussian_elimination"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.linear_algebra.gauss.gaussian_elimination" title="Link to this definition"></a></dt>
+<dd><p>Function to solve a system of linear equations using the Gaussian elimination method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrix</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em>) – Matrix of the system.</p></li>
+<li><p><strong>intercept</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Intercept of the system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple with the matrix and the intercept of the system.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[List[List[float]], List[float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.linear_algebra.gauss.matrix_pivoting">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.linear_algebra.gauss.</span></span><span class="sig-name descname"><span class="pre">matrix_pivoting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intercept</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/numeric_methods/linear_algebra/gauss.html#matrix_pivoting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.linear_algebra.gauss.matrix_pivoting" title="Link to this definition"></a></dt>
+<dd><p>Function to pivot the matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrix</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em>) – Matrix to pivot.</p></li>
+<li><p><strong>intercept</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Intercept of the matrix.</p></li>
+<li><p><strong>k</strong> (<em>int</em>) – Index of the current iteration.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.linear_algebra.lu">
+<dt class="sig sig-object py" id="numeric_methods.linear_algebra.lu.lu_decomposition">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.linear_algebra.lu.</span></span><span class="sig-name descname"><span class="pre">lu_decomposition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intercept</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/numeric_methods/linear_algebra/lu.html#lu_decomposition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.linear_algebra.lu.lu_decomposition" title="Link to this definition"></a></dt>
+<dd><p>Function to solve a system of linear equations using the LU decomposition method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length</strong> (<em>int</em>) – Length of the matrix.</p></li>
+<li><p><strong>matrix</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em>) – Matrix of the system.</p></li>
+<li><p><strong>intercept</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Intercept of the system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Vector with the solution of the system.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.linear_algebra">
+<dt class="sig sig-object py" id="numeric_methods.linear_algebra.gaussian_elimination">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.linear_algebra.</span></span><span class="sig-name descname"><span class="pre">gaussian_elimination</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intercept</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/numeric_methods/linear_algebra/gauss.html#gaussian_elimination"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.linear_algebra.gaussian_elimination" title="Link to this definition"></a></dt>
+<dd><p>Function to solve a system of linear equations using the Gaussian elimination method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>matrix</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em>) – Matrix of the system.</p></li>
+<li><p><strong>intercept</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Intercept of the system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tuple with the matrix and the intercept of the system.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Tuple[List[List[float]], List[float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.linear_algebra.lu_decomposition">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.linear_algebra.</span></span><span class="sig-name descname"><span class="pre">lu_decomposition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">length</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intercept</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/numeric_methods/linear_algebra/lu.html#lu_decomposition"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.linear_algebra.lu_decomposition" title="Link to this definition"></a></dt>
+<dd><p>Function to solve a system of linear equations using the LU decomposition method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>length</strong> (<em>int</em>) – Length of the matrix.</p></li>
+<li><p><strong>matrix</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em>) – Matrix of the system.</p></li>
+<li><p><strong>intercept</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Intercept of the system.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Vector with the solution of the system.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>List[float]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.statistics.error_metrics">
+<dt class="sig sig-object py" id="numeric_methods.statistics.error_metrics.mae">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.statistics.error_metrics.</span></span><span class="sig-name descname"><span class="pre">mae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/statistics/error_metrics.html#mae"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.statistics.error_metrics.mae" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the mean absolute error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Real values.</p></li>
+<li><p><strong>y_pred</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Predicted values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mean absolute error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.statistics.error_metrics.mse">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.statistics.error_metrics.</span></span><span class="sig-name descname"><span class="pre">mse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/statistics/error_metrics.html#mse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.statistics.error_metrics.mse" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the mean squared error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Real values.</p></li>
+<li><p><strong>y_pred</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Predicted values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mean squared error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.statistics.error_metrics.rmse">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.statistics.error_metrics.</span></span><span class="sig-name descname"><span class="pre">rmse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/statistics/error_metrics.html#rmse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.statistics.error_metrics.rmse" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the root mean squared error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Real values.</p></li>
+<li><p><strong>y_pred</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Predicted values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Root mean squared error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.statistics">
+<dt class="sig sig-object py" id="numeric_methods.statistics.mae">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.statistics.</span></span><span class="sig-name descname"><span class="pre">mae</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/statistics/error_metrics.html#mae"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.statistics.mae" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the mean absolute error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Real values.</p></li>
+<li><p><strong>y_pred</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Predicted values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mean absolute error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.statistics.mse">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.statistics.</span></span><span class="sig-name descname"><span class="pre">mse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/statistics/error_metrics.html#mse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.statistics.mse" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the mean squared error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Real values.</p></li>
+<li><p><strong>y_pred</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Predicted values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Mean squared error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="numeric_methods.statistics.rmse">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.statistics.</span></span><span class="sig-name descname"><span class="pre">rmse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_true</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_pred</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="reference internal" href="_modules/numeric_methods/statistics/error_metrics.html#rmse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.statistics.rmse" title="Link to this definition"></a></dt>
+<dd><p>Function to calculate the root mean squared error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>y_true</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Real values.</p></li>
+<li><p><strong>y_pred</strong> (<em>List</em><em>[</em><em>float</em><em>]</em>) – Predicted values.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Root mean squared error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function" id="module-numeric_methods.tools.tools">
+<dt class="sig sig-object py" id="numeric_methods.tools.tools.print_matrix">
+<span class="sig-prename descclassname"><span class="pre">numeric_methods.tools.tools.</span></span><span class="sig-name descname"><span class="pre">print_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/numeric_methods/tools/tools.html#print_matrix"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#numeric_methods.tools.tools.print_matrix" title="Link to this definition"></a></dt>
+<dd><p>Function to print a matrix.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>matrix</strong> (<em>List</em><em>[</em><em>List</em><em>[</em><em>float</em><em>]</em><em>]</em>) – Matrix to print.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="numeric_methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dominik Sieroń.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

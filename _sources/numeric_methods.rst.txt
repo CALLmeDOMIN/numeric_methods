@@ -1,0 +1,75 @@
+numeric\_methods package
+========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+Module contents
+---------------
+
+.. automodule:: numeric_methods.integration.simpson
+   :members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.integration.trapezoidal
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.interpolation.horner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.interpolation.lagrange
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.interpolation.natural
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.interpolation.newton
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.interpolation
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.linear_algebra.gauss
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.linear_algebra.lu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.linear_algebra
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.statistics.error_metrics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+.. automodule:: numeric_methods.tools.tools
+   :members:
+   :undoc-members:
+   :show-inheritance:

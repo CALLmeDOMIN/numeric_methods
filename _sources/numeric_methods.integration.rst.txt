@@ -1,0 +1,29 @@
+numeric\_methods.integration package
+====================================
+
+Submodules
+----------
+
+numeric\_methods.integration.simpson module
+-------------------------------------------
+
+.. automodule:: numeric_methods.integration.simpson
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+numeric\_methods.integration.trapezoidal module
+-----------------------------------------------
+
+.. automodule:: numeric_methods.integration.trapezoidal
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: numeric_methods.integration
+   :members:
+   :undoc-members:
+   :show-inheritance:

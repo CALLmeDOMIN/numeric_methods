@@ -1,0 +1,21 @@
+numeric\_methods.tools package
+==============================
+
+Submodules
+----------
+
+numeric\_methods.tools.tools module
+-----------------------------------
+
+.. automodule:: numeric_methods.tools.tools
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: numeric_methods.tools
+   :members:
+   :undoc-members:
+   :show-inheritance:

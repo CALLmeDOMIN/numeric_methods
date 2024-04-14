@@ -1,0 +1,7 @@
+numeric_methods
+===============
+
+.. toctree::
+   :maxdepth: 4
+
+   numeric_methods

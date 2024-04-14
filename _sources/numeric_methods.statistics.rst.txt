@@ -1,0 +1,21 @@
+numeric\_methods.statistics package
+===================================
+
+Submodules
+----------
+
+numeric\_methods.statistics.error\_metrics module
+-------------------------------------------------
+
+.. automodule:: numeric_methods.statistics.error_metrics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: numeric_methods.statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:

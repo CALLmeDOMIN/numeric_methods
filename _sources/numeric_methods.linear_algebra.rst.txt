@@ -1,0 +1,29 @@
+numeric\_methods.linear\_algebra package
+========================================
+
+Submodules
+----------
+
+numeric\_methods.linear\_algebra.gauss module
+---------------------------------------------
+
+.. automodule:: numeric_methods.linear_algebra.gauss
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+numeric\_methods.linear\_algebra.lu module
+------------------------------------------
+
+.. automodule:: numeric_methods.linear_algebra.lu
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: numeric_methods.linear_algebra
+   :members:
+   :undoc-members:
+   :show-inheritance:

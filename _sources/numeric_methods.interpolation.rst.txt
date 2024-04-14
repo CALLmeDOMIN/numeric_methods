@@ -1,0 +1,45 @@
+numeric\_methods.interpolation package
+======================================
+
+Submodules
+----------
+
+numeric\_methods.interpolation.horner module
+--------------------------------------------
+
+.. automodule:: numeric_methods.interpolation.horner
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+numeric\_methods.interpolation.lagrange module
+----------------------------------------------
+
+.. automodule:: numeric_methods.interpolation.lagrange
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+numeric\_methods.interpolation.natural module
+---------------------------------------------
+
+.. automodule:: numeric_methods.interpolation.natural
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+numeric\_methods.interpolation.newton module
+--------------------------------------------
+
+.. automodule:: numeric_methods.interpolation.newton
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: numeric_methods.interpolation
+   :members:
+   :undoc-members:
+   :show-inheritance:
