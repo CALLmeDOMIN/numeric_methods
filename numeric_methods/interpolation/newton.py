@@ -2,6 +2,16 @@ from typing import List
 
 
 def divided_diff(x: List[float], y: List[float]) -> List[float]:
+    """
+    Function to calculate the divided differences of a set of points.
+
+    Args:
+        x (List[float]): First set of points.
+        y (List[float]): Second set of points.
+
+    Returns:
+        List[float]: List of divided differences.
+    """
     n = len(y)
     coef = y.copy()
     for j in range(1, n):

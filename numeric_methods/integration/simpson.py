@@ -2,6 +2,18 @@ from typing import Callable
 
 
 def simpson_formula(f: Callable[..., float], n: int, a: float, b: float) -> float:
+    """
+    Function to calculate the integral of a function using Simpson's formula.
+
+    Args:
+        f (Callable[..., float]): Function to integrate. Should return a number.
+        n (int): Number of subintervals.
+        a (float): Lower limit of integration.
+        b (float): Upper limit of integration.
+
+    Returns:
+        float: Result of the integral.
+    """
     n *= 2
     h = (b - a) / n
     x = [a + i * h for i in range(n + 1)]

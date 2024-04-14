@@ -3,6 +3,18 @@ from numpy import zeros as np_zeros
 
 
 def lu_decomposition(length: int, matrix: List[List[float]], intercept: List[float]) -> List[float]:
+    """
+    Function to solve a system of linear equations using the LU decomposition method.
+
+    Args:
+        length (int): Length of the matrix.
+        matrix (List[List[float]]): Matrix of the system.
+        intercept (List[float]): Intercept of the system.
+
+    Returns:
+        List[float]: Vector with the solution of the system.
+    """
+
     L = np_zeros((length, length))
     U = np_zeros((length, length))
 
