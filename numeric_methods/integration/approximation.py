@@ -1,4 +1,3 @@
-from numeric_methods import gauss_legendre_formula, lu_decomposition
 from typing import Callable, List
 
 
@@ -15,6 +14,8 @@ def approximate_integral(f: Callable[[float], float], base: List[any], start: fl
     Returns:
         List[float]: Coefficients of the polynomial.
     """
+    from numeric_methods import gauss_legendre_formula, lu_decomposition
+
     matrix = []
     intercept = []
 
